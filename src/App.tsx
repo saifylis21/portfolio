@@ -1,17 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import './App.css';
+import "./App.css";
 
-import Main from './components/Main';
+import Title from "./components/Title";
 
 function App() {
   return (
-    // <Page />
     <>
-        <h1>hello from App</h1>
-        <Main />
+      <Title />
     </>
-
   );
 }
 
