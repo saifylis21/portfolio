@@ -19,14 +19,15 @@
     font-size: 1.4em;
     margin: 0;
     font-weight: bold;
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1.375s;
 }
 
 .title_container {
     margin-top: auto;
     margin-bottom: auto;
-    padding-top: 8.33333vw;
-    padding-bottom: 8.33333vw;
+    /* padding-top: 8.33333vw;
+    padding-bottom: 8.33333vw; */
+    /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 5.2, 0, 1); */
 }
 
 .title_container h1 {
@@ -36,36 +37,31 @@
 }
 
 .t_c_1 {
-    animation: fadeIn 1.5s;
-    -webkit-animation: fadeIn 1.5s;
-    -moz-animation: fadeIn 1.5s;
-    -o-animation: fadeIn 1.5s;
-    -ms-animation: fadeIn 1.5s;
+    animation: reveal 1.5s cubic-bezier(0.25, 1, 0.25, 1);
+    -webkit-animation: reveal 1.5s cubic-bezier(0.25, 1, 0.25, 1);
+    -moz-animation: reveal 1.5s cubic-bezier(0.25, 1, 0.25, 1);
+    -o-animation: reveal 1.5s cubic-bezier(0.25, 1, 0.25, 1);
+    -ms-animation: reveal 1.5s cubic-bezier(0.25, 1, 0.25, 1);
 }
 
 .t_c_2 {
-    animation: fadeIn 3.5s;
-    -webkit-animation: fadeIn 3.5s;
-    -moz-animation: fadeIn 3.5s;
-    -o-animation: fadeIn 3.5s;
-    -ms-animation: fadeIn 3.5s;
+    animation: reveal 2s cubic-bezier(0.25, 1, 0.25, 1);
+    -webkit-animation: reveal 2s cubic-bezier(0.25, 1, 0.25, 1);
+    -moz-animation: reveal 2s cubic-bezier(0.25, 1, 0.25, 1);
+    -o-animation: reveal 2s cubic-bezier(0.25, 1, 0.25, 1);
+    -ms-animation: reveal 2s cubic-bezier(0.25, 1, 0.25, 1);
 }
 
 .t_c_3 {
-    animation: fadeIn 5.5s;
-    -webkit-animation: fadeIn 5.5s;
-    -moz-animation: fadeIn 5.5s;
-    -o-animation: fadeIn 5.5s;
-    -ms-animation: fadeIn 5.5s;
+    animation: reveal 2.5s cubic-bezier(0.25, 1, 0.25, 1);
+    -webkit-animation: reveal 2.5s cubic-bezier(0.25, 1, 0.25, 1);
+    -moz-animation: reveal 2.5s cubic-bezier(0.25, 1, 0.25, 1);
+    -o-animation: reveal 2.5s cubic-bezier(0.25, 1, 0.25, 1);
+    -ms-animation: reveal 2.5s cubic-bezier(0.25, 1, 0.25, 1);
 }
 
-/* .fade_in {
-  animation: fadeIn 1.5s;
-  -webkit-animation: fadeIn 1.5s;
-  -moz-animation: fadeIn 1.5s;
-  -o-animation: fadeIn 1.5s;
-  -ms-animation: fadeIn 1.5s;
-} */
+/* 1.125s, 1.250, 1.375 */
+
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
@@ -89,4 +85,31 @@
 @-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+/* REVEAL ANIMATION */
+
+@keyframes reveal {
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    100% {transform: scale(1); opacity: 100%;}
+}
+
+@-moz-keyframes reveal {
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    100% {transform: scale(1); opacity: 100%;}
+}
+
+@-webkit-keyframes reveal {
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    100% {transform: scale(1); opacity: 100%;}
+}
+
+@-o-keyframes reveal {
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    100% {transform: scale(1); opacity: 100%;}
+}
+
+@-ms-keyframes reveal {
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    100% {transform: scale(1); opacity: 100%;}
 }
