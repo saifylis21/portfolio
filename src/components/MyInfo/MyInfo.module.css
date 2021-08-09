@@ -1,0 +1,10 @@
+.MyInfo h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.MyInfo p {
+    line-height: 1.75;
+    font-size: 2rem;
+    margin: 0;
+}

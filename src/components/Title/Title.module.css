@@ -25,15 +25,13 @@
 .title_container {
     margin-top: auto;
     margin-bottom: auto;
-    /* padding-top: 8.33333vw;
-    padding-bottom: 8.33333vw; */
-    /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 5.2, 0, 1); */
 }
 
 .title_container h1 {
     font-size: 8.5vw;
     line-height: 1.2;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .t_c_1 {
@@ -60,7 +58,22 @@
     -ms-animation: reveal 2.5s cubic-bezier(0.25, 1, 0.25, 1);
 }
 
-/* 1.125s, 1.250, 1.375 */
+.picture_container {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.picture_container img {
+    max-height: 600px;
+}
+
+.picture_container div {
+    display: block;
+    font-size: 1.4em;
+    margin: 0;
+}
 
 @keyframes fadeIn {
   0% {opacity:0;}
@@ -90,26 +103,26 @@
 /* REVEAL ANIMATION */
 
 @keyframes reveal {
-    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, -90deg); opacity: 0%;}
     100% {transform: scale(1); opacity: 100%;}
 }
 
 @-moz-keyframes reveal {
-    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, -90deg); opacity: 0%;}
     100% {transform: scale(1); opacity: 100%;}
 }
 
 @-webkit-keyframes reveal {
-    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, -90deg); opacity: 0%;}
     100% {transform: scale(1); opacity: 100%;}
 }
 
 @-o-keyframes reveal {
-    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, -90deg); opacity: 0%;}
     100% {transform: scale(1); opacity: 100%;}
 }
 
 @-ms-keyframes reveal {
-    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, 90deg); opacity: 0%;}
+    0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, -90deg); opacity: 0%;}
     100% {transform: scale(1); opacity: 100%;}
 }

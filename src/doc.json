@@ -1,0 +1,45 @@
+{
+  "_createdAt": "2021-08-07T18:56:29Z",
+  "_id": "f4df0978-e5c6-4185-a2ed-5ae9c5241784",
+  "_rev": "iVwPDImeJY1rAyYww1ouPP",
+  "_type": "myInfo",
+  "_updatedAt": "2021-08-08T16:25:54Z",
+  "text": [
+    {
+      "_key": "498facf4713d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6215044dbb6",
+          "_type": "span",
+          "marks": [],
+          "text": "Hello and welcome! I'm a digital designer and web developer based in Pakistan, specialising "
+        },
+        {
+          "_key": "f74baf9bb0f9",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "UI/UX design"
+        },
+        {
+          "_key": "6e1f523f9acb",
+          "_type": "span",
+          "marks": [],
+          "text": " and "
+        },
+        {
+          "_key": "f2ed4067ce97",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "web development."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ]
+}
