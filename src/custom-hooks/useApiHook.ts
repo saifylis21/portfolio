@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import sanityClient from "../client";
 import TitleContent from "../models/TitleContent";
-// import MyInfoContent from "../models/MyInfoContent";
+import MyInfoContent from "../models/MyInfoContent";
 
 const useApiHook = () => {
   const [titleData, setTitleData] = useState< TitleContent | null >(null);
-  const [myInfo, setMyInfo] = useState< any | null >(null);
+  const [myInfo, setMyInfo] = useState< MyInfoContent | null >(null);
 
   function fetchTitleData() {
     sanityClient
@@ -24,7 +24,6 @@ const useApiHook = () => {
           }`
       )
       .then((response) => {
-        // console.log(response[0]);
         setTitleData(response[0]);
       })
       .catch((error) => {
@@ -42,7 +41,7 @@ const useApiHook = () => {
       }`
     )
     .then((response) => {
-      console.log(response);
+      console.log(response[0]);
       setMyInfo(response[0]);
     })
     .catch((error) => {

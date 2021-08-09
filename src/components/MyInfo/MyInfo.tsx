@@ -1,32 +1,57 @@
 import React from "react";
 
-// import classes from "./MyInfo.module.css";
-// import MyInfoContent from '../../models/MyInfoContent';
+import classes from "./MyInfo.module.css";
+import MyInfoContent from "../../models/MyInfoContent";
+import PortableText from "react-portable-text";
 
 type MyInfoProps = {
-  myInfo: any | null;
+  myInfo: MyInfoContent | null;
 };
 
-const MyInfo: React.FC<MyInfoProps>  = (props) => (
-  <div className="MyInfo">
-    <h1>jfsdunfjksdankjfdsjk</h1>
-  </div>
-  // <div className={classes.MyInfo}>
-  //   <h1>{props.myInfo?.aboutMeHeading}</h1>
-  //   <p>
-  //     {props.myInfo?.aboutMeText1}
-  //     Hello and welcome! I'm a digital designer and web developer based in
-  //     Pakistan, specializing <strong>UI/UX design</strong> and{" "}
-  //     <strong>web development.</strong>
-  //   </p>
-  //   <br />
-  //   <p>
-  //     I took the Cambridge A-level exams from Roots International Schools. The
-  //     subjects I excel in are <strong>Computer Science, Mathematics</strong> and <strong>Physics.</strong> Now, I
-  //     am a university student of National University of Computer
-  //     and Emerging Sciences (FAST) doing bachelors in Artificial Intelligence.
-  //   </p>
-  // </div>
-);
+const MyInfo: React.FC<MyInfoProps> = ({ myInfo }) => {
+  // let showText1 = null;
+  // if (props.myInfo?.aboutMeText1) {
+  //   showText1 = <PortableText
+  //     content={props.myInfo.aboutMeText1 as [object]}
+  //     className={"styles"}
+  //     serializers={{}}
+  //   />;
+  // }
+
+  // let showText2 = null;
+  // if (props.myInfo?.aboutMeText2) {
+  //   showText2 = <PortableText
+  //     content={props.myInfo.aboutMeText2 as [object]}
+  //     className={"styles"}
+  //     serializers={{}}
+  //   />;
+  // }
+
+  return (
+    <div className={classes.MyInfo}>
+      <h1>{myInfo?.aboutMeHeading}</h1>
+
+      <p>
+        {myInfo && (
+          <PortableText
+            content={myInfo.aboutMeText1 as [object]}
+            className={"dummyStyles"}
+            serializers={{}}
+          />
+        )}
+      </p>
+      <br />
+      <p>
+        {myInfo && (
+          <PortableText
+            content={myInfo.aboutMeText2 as [object]}
+            className={"dummyStyles"}
+            serializers={{}}
+          />
+        )}
+      </p>
+    </div>
+  );
+};
 
 export default MyInfo;
