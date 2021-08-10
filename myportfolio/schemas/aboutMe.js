@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  name: "myInfo",
-  title: "My Info",
+  name: "aboutMe",
+  title: "About Me",
   type: "document",
   fields: [
     {

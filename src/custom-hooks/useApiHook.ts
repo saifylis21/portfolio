@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import sanityClient from "../client";
 import TitleContent from "../models/TitleContent";
-import MyInfoContent from "../models/MyInfoContent";
+import AboutMeContent from "../models/AboutMeContent";
 
 const useApiHook = () => {
   const [titleData, setTitleData] = useState< TitleContent | null >(null);
-  const [myInfo, setMyInfo] = useState< MyInfoContent | null >(null);
+  const [aboutMe, setAboutMe] = useState< AboutMeContent | null >(null);
 
   function fetchTitleData() {
     sanityClient
@@ -31,10 +31,10 @@ const useApiHook = () => {
       });
   }
 
-  function fetchMyInfo() {
+  function fetchAboutMe() {
     sanityClient
     .fetch(
-      `*[_type == "myInfo"] {
+      `*[_type == "aboutMe"] {
         aboutMeHeading,
         aboutMeText1,
         aboutMeText2
@@ -42,7 +42,7 @@ const useApiHook = () => {
     )
     .then((response) => {
       console.log(response[0]);
-      setMyInfo(response[0]);
+      setAboutMe(response[0]);
     })
     .catch((error) => {
       console.log(error);
@@ -51,10 +51,10 @@ const useApiHook = () => {
 
   useEffect(() => {
     fetchTitleData();
-    fetchMyInfo();
+    fetchAboutMe();
   }, []);
 
-  return {titleData, myInfo};
+  return {titleData, aboutMe};
 };
 
 export default useApiHook;

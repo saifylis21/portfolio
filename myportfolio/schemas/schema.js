@@ -5,7 +5,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 import titleContent from './titleContent';
-import myInfo from './myInfo';
+import aboutMe from './aboutMe';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -16,6 +16,6 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     titleContent,
-    myInfo
+    aboutMe
   ]),
 })

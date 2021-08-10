@@ -1,22 +1,29 @@
-import "./App.css";
+import LocomotiveScroll from "locomotive-scroll";
+import { useEffect } from "react";
 
 import useApiHook from "./custom-hooks/useApiHook";
 import Title from "./components/Title/Title";
-import MyInfo from './components/MyInfo/MyInfo';
-// import PortableText from '@sanity/block-content-to-react';
-// import PortableText from "react-portable-text";
-// import doc from "./doc.json";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 function App() {
-  const { titleData, myInfo } = useApiHook();
+  const { titleData, aboutMe } = useApiHook();
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+      multiplier: .5
+    });
+  }, []);
 
   return (
     <>
-      <Title titleData={titleData} />
-      <MyInfo myInfo={myInfo}/>
+      <div data-scroll-container>
+        <Title titleData={titleData} />
+        <AboutMe aboutMe={aboutMe} />
+      </div>
     </>
   );
 }
 
 export default App;
-
