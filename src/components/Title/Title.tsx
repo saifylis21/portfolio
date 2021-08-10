@@ -9,28 +9,28 @@ type TitleProps = {
 
 const Title: React.FC<TitleProps> = (props) => (
   <>
-    <section data-scroll data-scroll-section>
+    <section data-scroll-section>
       <div className={classes.Title}>
         <div className={`${classes.my_name} ${classes.fade_in}`}>
           <h5>{props.titleData?.myName}</h5>
         </div>
-        <div className={classes.title_container}>
+        <div data-scroll data-scroll-speed="2" className={classes.title_container}>
           <h1>
-            <div className={classes.t_c_1}>{props.titleData?.mainTitle1}</div>
-            <div className={classes.t_c_2}>{props.titleData?.mainTitle2}</div>
-            <div className={classes.t_c_3}>{props.titleData?.mainTitle3}</div>
+            <div data-scroll className={classes.t_c_1}>{props.titleData?.mainTitle1}</div>
+            <div data-scroll className={classes.t_c_2}>{props.titleData?.mainTitle2}</div>
+            <div data-scroll className={classes.t_c_3}>{props.titleData?.mainTitle3}</div>
           </h1>
         </div>
       </div>
     </section>
 
-    <section data-scroll data-scroll-section>
-      <div className={classes.picture_container}>
-        <div>Designer & Developer</div>
+    <section data-scroll-section>
+      <div data-scroll data-scroll-speed="2" className={classes.picture_container}>
+        <div data-scroll>Designer & Developer</div>
         <div>
-          <img src={props.titleData?.myPicture.asset.url} alt="..." />
+          <img data-scroll src={props.titleData?.myPicture.asset.url} alt="..." />
         </div>
-        <div>Based in Pakistan</div>
+        <div data-scroll>Based in Pakistan</div>
       </div>
     </section>
   </>

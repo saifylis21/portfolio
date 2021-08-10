@@ -9,8 +9,8 @@ type AboutMeProps = {
 };
 
 const AboutMe: React.FC<AboutMeProps> = ({ aboutMe }) => (
-  <section data-scroll data-scroll-section>
-    <div className={classes.MyInfo}>
+  <section data-scroll-section>
+    <div data-scroll data-scroll-speed="2" data-scroll-class={classes.scrollClass} className={classes.MyInfo}>
       <h1>{aboutMe?.aboutMeHeading}</h1>
 
       <p>

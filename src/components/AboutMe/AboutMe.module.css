@@ -1,5 +1,11 @@
 .MyInfo {
-    margin: 15% 0 15% 0;
+    margin-bottom: 7%;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.scrollClass {
+    opacity: 1;
 }
 
 .MyInfo h1 {
