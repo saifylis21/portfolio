@@ -1,4 +1,4 @@
-.AboutMe {
+.Skills {
     opacity: 0;
     transition: opacity 1.5s;
 }
@@ -7,12 +7,12 @@
     opacity: 1;
 }
 
-.AboutMe h1 {
+.Skills h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.AboutMe p {
+.Skills p {
     line-height: 1.75;
     font-size: 2rem;
     margin: 0;
