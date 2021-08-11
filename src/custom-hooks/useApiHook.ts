@@ -4,11 +4,13 @@ import sanityClient from "../client";
 import TitleContent from "../models/TitleContent";
 import AboutMeContent from "../models/AboutMeContent";
 import SkillsContent from "../models/SkillsContent";
+import ContactsContent from "../models/ContactsContent";
 
 const useApiHook = () => {
   const [titleData, setTitleData] = useState<TitleContent | null>(null);
   const [aboutMe, setAboutMe] = useState<AboutMeContent | null>(null);
   const [skills, setSkills] = useState<SkillsContent | null>(null);
+  const [contacts, setContacts] = useState<ContactsContent | null>(null);
 
   function fetchTitleData() {
     sanityClient
@@ -44,7 +46,6 @@ const useApiHook = () => {
       }`
       )
       .then((response) => {
-        console.log(response[0]);
         setAboutMe(response[0]);
       })
       .catch((error) => {
@@ -57,11 +58,12 @@ const useApiHook = () => {
       .fetch(
         `*[_type == "skills"] {
         skillsHeading,
-        skillsText
+        skillsText,
+        skillsToolsHeading,
+        skillsTools
       }`
       )
       .then((response) => {
-        console.log(response[0]);
         setSkills(response[0]);
       })
       .catch((error) => {
@@ -69,13 +71,30 @@ const useApiHook = () => {
       });
   }
 
+  function fetchContacts() {
+    sanityClient
+    .fetch(
+      `*[_type == "contacts"] {
+        contactLinks
+      }`
+    )
+    .then((response) => {
+      console.log(response[0]);
+      setContacts(response[0]);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+
   useEffect(() => {
     fetchTitleData();
     fetchAboutMe();
     fetchSkills();
+    fetchContacts();
   }, []);
 
-  return { titleData, aboutMe, skills };
+  return { titleData, aboutMe, skills, contacts };
 };
 
 export default useApiHook;

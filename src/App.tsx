@@ -5,9 +5,10 @@ import useApiHook from "./custom-hooks/useApiHook";
 import Title from "./components/Title/Title";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Skills from "./components/Skills/Skills";
+import Contacts from "./components/Contacts/Contacts";
 
 function App() {
-  const { titleData, aboutMe, skills } = useApiHook();
+  const { titleData, aboutMe, skills, contacts } = useApiHook();
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -24,6 +25,7 @@ function App() {
         <Title titleData={titleData} />
         <AboutMe aboutMe={aboutMe} />
         <Skills skills={skills} />
+        <Contacts contacts={contacts} />
       </div>
     </>
   );

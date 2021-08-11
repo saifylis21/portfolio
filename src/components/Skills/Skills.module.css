@@ -17,3 +17,23 @@
     font-size: 2rem;
     margin: 0;
 }
+
+.skillText {
+    margin-bottom: 50px;
+}
+
+.toolsList ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+.toolsList ul li {
+    background-color: #212120;
+    color: #f7f7f5;
+    padding: 4px 7px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,19 @@
+.Contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Contacts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Contacts ul li {
+  font-size: 8.5vw;
+  line-height: 1.2;
+  text-align: center;
+}

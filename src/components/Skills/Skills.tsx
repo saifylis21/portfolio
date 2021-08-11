@@ -21,11 +21,19 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => (
         {skills && (
           <PortableText
             content={skills?.skillsText as [object]}
-            className="dummyStyles"
+            className={classes.skillText}
             serializers={{}}
           />
         )}
       </p>
+      <h1>{skills?.skillsToolsHeading}</h1>
+      {skills && (
+        <PortableText
+          content={skills?.skillsTools as [object]}
+          className={classes.toolsList}
+          serializers={{}}
+        />
+      )}
     </div>
   </section>
 );

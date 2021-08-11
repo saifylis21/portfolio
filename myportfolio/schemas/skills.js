@@ -15,5 +15,16 @@ export default {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "skillsToolsHeading",
+      title: "Skills Tools Heading",
+      type: "string",
+    },
+    {
+      name: "skillsTools",
+      title: "Skills Tools",
+      type: "array",
+      of: [{ type: "block" }],
+    }
   ],
 };
