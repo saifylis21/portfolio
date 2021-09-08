@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./Skills.module.css";
+import classes from './Skills.module.css';
 import SkillsContent from "../../models/SkillsContent";
 import PortableText from "react-portable-text";
 
@@ -17,7 +17,6 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => (
       className={classes.Skills}
     >
       <h1>{skills?.skillsHeading}</h1>
-      <p>
         {skills && (
           <PortableText
             content={skills?.skillsText as [object]}
@@ -25,7 +24,6 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => (
             serializers={{}}
           />
         )}
-      </p>
       <h1>{skills?.skillsToolsHeading}</h1>
       {skills && (
         <PortableText

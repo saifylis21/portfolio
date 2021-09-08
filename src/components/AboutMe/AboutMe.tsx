@@ -13,7 +13,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ aboutMe }) => (
     <div data-scroll data-scroll-speed="2" data-scroll-class={classes.scrollClass} className={classes.AboutMe}>
       <h1>{aboutMe?.aboutMeHeading}</h1>
 
-      <p>
         {aboutMe && (
           <PortableText
             content={aboutMe.aboutMeText1 as [object]}
@@ -21,9 +20,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ aboutMe }) => (
             serializers={{}}
           />
         )}
-      </p>
       <br />
-      <p>
         {aboutMe && (
           <PortableText
             content={aboutMe.aboutMeText2 as [object]}
@@ -31,7 +28,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ aboutMe }) => (
             serializers={{}}
           />
         )}
-      </p>
     </div>
   </section>
 );

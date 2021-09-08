@@ -26,11 +26,11 @@ const Title: React.FC<TitleProps> = (props) => (
 
     <section data-scroll-section>
       <div data-scroll data-scroll-speed="2" className={classes.picture_container}>
-        <div data-scroll>Designer & Developer</div>
+        <div data-scroll>{props.titleData?.whatIam}</div>
         <div>
           <img data-scroll src={props.titleData?.myPicture.asset.url} alt="..." />
         </div>
-        <div data-scroll>Based in Pakistan</div>
+        <div data-scroll>{props.titleData?.basedIn}</div>
       </div>
     </section>
   </>

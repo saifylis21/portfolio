@@ -66,7 +66,8 @@
 }
 
 .picture_container img {
-    max-height: 600px;
+    max-height: 350px;
+    border-radius: 50%;
 }
 
 .picture_container div {
@@ -125,4 +126,20 @@
 @-ms-keyframes reveal {
     0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, -90deg); opacity: 0%;}
     100% {transform: scale(1); opacity: 100%;}
+}
+
+/* Medias */
+
+@media(max-width: 990px) {
+    .picture_container {
+        flex-direction: column;
+    }
+
+    .picture_container div:first-child {
+        margin-bottom: 50px;
+    }
+
+    .picture_container div:last-child {
+        margin-top: 50px;
+    }
 }

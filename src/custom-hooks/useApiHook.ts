@@ -25,7 +25,9 @@ const useApiHook = () => {
                 _id,
                 url
               }
-            }
+            },
+            whatIam,
+            basedIn
           }`
       )
       .then((response) => {

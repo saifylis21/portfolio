@@ -31,6 +31,16 @@ export default {
       options: {
         hotspot: true
       }
+    },
+    {
+      name: "whatIam",
+      title: "What I Am",
+      type: "string",
+    },
+    {
+      name: "basedIn",
+      title: "Based In",
+      type: "string",
     }
   ],
 };
