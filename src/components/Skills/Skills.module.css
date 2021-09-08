@@ -37,3 +37,17 @@
     margin-right: 10px;
     border-radius: 5px;
 }
+
+@media(max-width: 760px) {
+    .Skills h1 {
+        font-size: 28px;
+    }
+    .Skills p {
+        font-size: 20px;
+    }
+
+    .toolsList ul li {
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+}

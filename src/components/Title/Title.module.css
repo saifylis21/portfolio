@@ -67,6 +67,7 @@
 
 .picture_container img {
     max-height: 350px;
+    width: 100%;
     border-radius: 50%;
 }
 
@@ -127,8 +128,6 @@
     0% {transform: scale(0.875) translate(0px, 100%) rotate3d(1, 0, 0, -90deg); opacity: 0%;}
     100% {transform: scale(1); opacity: 100%;}
 }
-
-/* Medias */
 
 @media(max-width: 990px) {
     .picture_container {
