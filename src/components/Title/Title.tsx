@@ -16,9 +16,9 @@ const Title: React.FC<TitleProps> = (props) => (
         </div>
         <div className={classes.title_container}>
           <h1>
-            <div  className={classes.t_c_1}>{props.titleData?.mainTitle1}</div>
-            <div  className={classes.t_c_2}>{props.titleData?.mainTitle2}</div>
-            <div  className={classes.t_c_3}>{props.titleData?.mainTitle3}</div>
+            <div className={classes.t_c_1}>{props.titleData?.mainTitle1}</div>
+            <div className={classes.t_c_2}>{props.titleData?.mainTitle2}</div>
+            <div className={classes.t_c_3}>{props.titleData?.mainTitle3}</div>
           </h1>
         </div>
       </div>

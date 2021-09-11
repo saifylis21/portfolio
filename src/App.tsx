@@ -9,12 +9,13 @@ import Spinner from "./components/Spinner/Spinner";
 
 function App() {
   const { titleData, aboutMe, skills, contacts } = useApiHook();
+  console.log(titleData, aboutMe, skills, contacts, 'got em!!!');
 
   const [isHide, setIsHide] = useState(true);
 
   setTimeout(() => {
     setIsHide(false);
-  }, 2500);
+  }, 5000);
 
   return (
     <>
