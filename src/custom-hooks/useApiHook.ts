@@ -81,7 +81,6 @@ const useApiHook = () => {
       }`
     )
     .then((response) => {
-      console.log(response[0]);
       setContacts(response[0]);
     })
     .catch((error) => {

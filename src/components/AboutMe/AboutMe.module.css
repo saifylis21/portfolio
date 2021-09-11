@@ -1,10 +1,5 @@
 .AboutMe {
-    opacity: 0;
-    transition: opacity 1.5s;
-}
-
-.scrollClass {
-    opacity: 1;
+    margin-top: 10vh;
 }
 
 .AboutMe h1 {

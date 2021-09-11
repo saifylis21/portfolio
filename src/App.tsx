@@ -18,18 +18,16 @@ function App() {
 
   return (
     <>
-      <div data-scroll-container>
-        {!isHide ? (
-          <>
-            <Title titleData={titleData} />
-            <AboutMe aboutMe={aboutMe} />
-            <Skills skills={skills} />
-            <Contacts contacts={contacts} />
-          </>
-        ) : (
-          <Spinner />
-        )}
-      </div>
+      {!isHide ? (
+        <>
+          <Title titleData={titleData} />
+          <AboutMe aboutMe={aboutMe} />
+          <Skills skills={skills} />
+          <Contacts contacts={contacts} />
+        </>
+      ) : (
+        <Spinner />
+      )}
     </>
   );
 }

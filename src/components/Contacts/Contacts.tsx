@@ -8,7 +8,7 @@ type ContactsProps = {
 };
 
 const Contacts: React.FC<ContactsProps> = ({ contacts }) => (
-  <section data-scroll-section>
+  <section>
     <div className={classes.Contacts}>
 
       {contacts && (<h1><PortableText 
